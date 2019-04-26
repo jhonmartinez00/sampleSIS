@@ -1,5 +1,6 @@
 <?php  
 	include_once 'database.php';
+
 	$sql = "SELECT * FROM student;";
 	$statement = $conn->prepare($sql);
 	$statement->execute();
@@ -39,7 +40,8 @@
 						foreach($data as $student):
 					?>
 					<tr>
-						<td><input type="submit" name="delete" class="btn btn-secondary" value="Update"></td>
+						<td><a href="updateUser.php?id=<?= $student->s_id?>"><button class="btn btn-secondary" name="update" value="<?= $student->s_id; ?>">UPDATE</button></a></td>
+				
 						<td><?= $student->s_fname; ?></td>
 						<td><?= $student->s_lname; ?></td>
 						<td><?= $student->s_date; ?></td>

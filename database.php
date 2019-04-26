@@ -5,9 +5,8 @@
 
 	try {
 		$conn = new PDO($dsn,$username,$password);
-		echo 'Connection Successful';
 	}catch(PDOException $e){
-		echo 'Connection unSuccessful';
+		echo 'Connection Error';
 	}
 	// $serverName = 'localhost';
 	// $userName = 'root';
@@ -17,9 +16,8 @@
 	// $conn = mysqli_connect($serverName,$userName,$password,$dbName);
 
 	// if(mysqli_connect_errno()){
-	// echo 'Connection Not Established';
+	// echo 'Connection Error';
 	// }else{
-	// echo 'Connection Established';
 	// }
 
 ?>
